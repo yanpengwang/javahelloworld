@@ -10,7 +10,7 @@ public class AliPq {
     public static List<Integer> getTopList(List<Integer> inputList){
         final Integer NUM_SIZE = 100;
         List<Integer> resultList = new ArrayList<>();
-        Queue<Integer> pq = new PriorityQueue<>(NUM_SIZE, Comparator.comparing(Integer::intValue));
+        Queue<Integer> pq = new PriorityQueue<>(NUM_SIZE, Comparator.comparing(x->x));
         for(Integer x : inputList){
             pq.add(x);
             if (pq.size() > NUM_SIZE) {

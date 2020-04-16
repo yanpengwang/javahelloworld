@@ -29,5 +29,7 @@ public class IntegerIntArray {
         // Integer[] -> List<Integer>
         List<Integer> list3 = Arrays.asList(integers2);
 
+        System.out.println(list3.stream().reduce(Integer::sum).get());
+
     }
 }
